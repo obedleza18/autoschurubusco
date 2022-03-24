@@ -1,0 +1,5 @@
+import './src/styles/bootstrap-theme.css'
+import './src/styles/style.css'
+import './src/styles/owl.carousel.css'
+import './src/styles/owl.theme.css'
+import './src/styles/color1.css'
