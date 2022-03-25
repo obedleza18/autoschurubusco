@@ -1,35 +1,20 @@
 import * as React from "react"
+import TopHeader from "../components/TopHeader"
+import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const tagline = 'Buying or Selling,<br />just got easier!'
+  const links = [
+    { link: '/404', text: 'Buy' },
+    { link: 'add-listing-pricing.html', text: 'Sell' },
+    { link: 'joinus.html', text: 'Join' }
+  ]
+
   return (
     <>
       <header className="site-header-wrapper">
-        <header className="site-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="header-in">
-                  <div className="site-logo">
-                    <h1><a href="index.html"><img src="images/logo.png" alt="Logo" /></a></h1>
-                    <span className="site-tagline">Buying or Selling,<br />just got easier!</span>
-                  </div>
-                  <div className="header-right">
-                    <div className="user-login-panel">
-                      <a href="#" className="user-login-btn" data-bs-toggle="modal" data-bs-target="#loginModal"><i className="icon-profile"></i></a>
-                    </div>
-                    <div className="topnav dd-menu">
-                      <ul className="top-navigation sf-menu">
-                        <li><a href="results-list.html">Buy</a></li>
-                        <li><a href="add-listing-pricing.html">Sell</a></li>
-                        <li><a href="joinus.html">Join</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        <TopHeader tagline={tagline} links={links} logo={getImage(data.file)} />
         <nav className="navbar">
           <div className="container">
             <div className="col-12">
@@ -854,3 +839,13 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const data = graphql`
+  query {
+    file(relativePath: {eq: "logo.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

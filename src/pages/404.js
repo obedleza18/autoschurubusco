@@ -1,5 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import TopHeader from "../components/TopHeader"
 
 // styles
 const pageStyles = {
@@ -25,10 +27,17 @@ const codeStyles = {
 }
 
 // markup
-const NotFoundPage = () => {
+const NotFoundPage = ({ data }) => {
+  const tagline = 'Buying or Selling,<br />just got easier!'
+  const links = [
+    { link: '/404', text: 'Buy' },
+    { link: 'add-listing-pricing.html', text: 'Sell' },
+    { link: 'joinus.html', text: 'Join' }
+  ]
   return (
     <main style={pageStyles}>
       <title>Not found</title>
+      <TopHeader tagline={tagline} links={links} logo={getImage(data.file)} />
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry{" "}
@@ -52,3 +61,13 @@ const NotFoundPage = () => {
 }
 
 export default NotFoundPage
+
+export const data = graphql`
+  query {
+    file(relativePath: {eq: "logo.png"}) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
