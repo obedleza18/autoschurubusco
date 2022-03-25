@@ -3,6 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
 const TopHeader = ({ tagline, links, logo }) => {
+  console.log('test')
   return (
     <header className="site-header">
       <div className="container">
