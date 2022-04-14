@@ -8927,10 +8927,10 @@ label {
   background: rgba(255, 255, 255, 0.9); }
 
 .checkers-overlay {
-  background: url(/images/checkers.png) repeat; }
+  background: url(./images/checkers.png) repeat; }
 
 .pattern-overlay {
-  background: url(/images/pattern.png) repeat; }
+  background: url(./images/pattern.png) repeat; }
 
 .next-prev-nav {
   display: inline-block; }
@@ -9281,7 +9281,7 @@ p.meta-data {
 .flexslider {
   margin: 0;
   padding: 0;
-  background: url(/images/loader.gif) no-repeat scroll center center; }
+  background: url(./images/loader.gif) no-repeat scroll center center; }
 
 .flexslider .slides > li {
   display: none;
@@ -11050,9 +11050,9 @@ h1.page-title, .page-title.h1 {
 
 .hideShowPassword-toggle {
   background-color: transparent;
-  background-image: url("/images/assets/wink.png");
+  background-image: url("./images/assets/wink.png");
   /* fallback */
-  background-image: url("/images/assets/wink.svg"), none;
+  background-image: url("./images/assets/wink.svg"), none;
   background-position: 0 center;
   background-repeat: no-repeat;
   border: 2px solid transparent;

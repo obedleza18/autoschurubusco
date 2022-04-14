@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
     <>
       <header className="site-header-wrapper">
         <TopHeader tagline={tagline} links={links} logo={getImage(data.file)} />
-        <nav className="navbar">
+        {/*<nav className="navbar">
           <div className="container">
             <div className="col-12">
               <div className="display-flex nav-in">
@@ -372,9 +372,9 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </div>
-        </nav>
+        </nav>*/}
       </header>
-      <div className="hero-area">
+      {/*<div className="hero-area">
         <div className="hero-slider heroflex flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-speed="7000" data-pause="yes">
           <ul className="slides">
             <li className="parallax" style={{backgroundImage: 'url(https://via.placeholder.com/1400x500?text=IMAGE+PLACEHOLDER)'}}></li>
@@ -833,7 +833,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </footer>
-      <a id="back-to-top"><i className="fas fa-angle-double-up"></i></a>
+      <a id="back-to-top"><i className="fas fa-angle-double-up"></i></a>*/}
     </>
   )
 }

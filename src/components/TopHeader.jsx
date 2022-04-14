@@ -3,7 +3,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
 const TopHeader = ({ tagline, links, logo }) => {
-  console.log('test')
   return (
     <header className="site-header">
       <div className="container">
@@ -20,7 +19,7 @@ const TopHeader = ({ tagline, links, logo }) => {
                 </div>
                 <div className="topnav dd-menu">
                   <ul className="top-navigation sf-menu">
-                    {links.map(({ link, text }) => <li><Link to={link}>{text}</Link></li>)}
+                    {links.map(({ link, text }, index) => <li key={index}><Link to={link}>{text}</Link></li>)}
                     {/*links.map(({ link, text }) => 
                       <li>
                         <ul>

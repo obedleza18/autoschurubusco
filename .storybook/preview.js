@@ -1,9 +1,5 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
+import '../src/styles/bootstrap-theme.css'
+import '../src/styles/style.css'
+import '../src/styles/owl.carousel.css'
+import '../src/styles/owl.theme.css'
+import '../src/styles/color1.css'
