@@ -1,9 +1,9 @@
 import React from "react";
-import MegaMenu from "../components/MegaMenu";
+import MegaMenu from ".";
 
 export default {
   title: "General/MegaMenu",
-  component: MegaMenu,
+  component: MegaMenu
 };
 
 const Template = (args) => <MegaMenu {...args} />
